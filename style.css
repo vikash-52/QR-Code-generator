@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top left, #dbeafe, transparent 35%),
+        radial-gradient(circle at bottom right, #ede9fe, transparent 35%),
+        #f8fafc;
+
+    color: #111827;
+}
+
+.container {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+
+/* ================= CONTENT ================= */
+
+.content {
+    padding: 55px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 50px;
+}
+
+.logo span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    background: #4f46e5;
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 25px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+h1 span {
+    display: block;
+    color: #4f46e5;
+}
+
+.subtitle {
+    color: #64748b;
+
+    line-height: 1.7;
+
+    max-width: 550px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================= LABEL ================= */
+
+label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+}
+
+
+/* ================= TEXTAREA ================= */
+
+textarea {
+    width: 100%;
+
+    min-height: 130px;
+
+    padding: 16px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 14px;
+
+    outline: none;
+
+    resize: vertical;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+textarea:focus {
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+
+/* ================= OPTIONS ================= */
+
+.options {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    background: white;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.generate-btn {
+    flex: 1;
+
+    padding: 15px 20px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    border-radius: 12px;
+}
+
+.generate-btn:hover {
+    background: #4338ca;
+
+    transform: translateY(-2px);
+}
+
+.clear-btn {
+    padding: 15px 25px;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    border-radius: 12px;
+}
+
+.clear-btn:hover {
+    background: #e2e8f0;
+}
+
+
+/* ================= PREVIEW ================= */
+
+.preview {
+    background: #f8fafc;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.preview h2 {
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+#status {
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= QR CONTAINER ================= */
+
+#qrContainer {
+    width: 320px;
+    height: 320px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.08);
+
+    padding: 20px;
+}
+
+#qrContainer img,
+#qrContainer canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* ================= EMPTY ================= */
+
+.empty-state {
+    color: #94a3b8;
+}
+
+.empty-icon {
+    font-size: 70px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================= DOWNLOAD ================= */
+
+.download-btn {
+    width: 320px;
+
+    max-width: 100%;
+
+    padding: 15px;
+
+    margin-top: 20px;
+
+    border-radius: 12px;
+
+    background: #16a34a;
+
+    color: white;
+}
+
+.download-btn:hover:not(:disabled) {
+    background: #15803d;
+
+    transform: translateY(-2px);
+}
+
+.download-btn:disabled {
+    background: #cbd5e1;
+
+    cursor: not-allowed;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-top: 25px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .preview {
+        padding: 35px 20px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    .content {
+        padding: 25px 18px;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    #qrContainer {
+        width: 280px;
+        height: 280px;
+    }
+
+    .download-btn {
+        width: 280px;
+    }
+}
